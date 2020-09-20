@@ -18,6 +18,36 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Amatic SC", sans-serif}
 }
 </style>
 </head><body>
+<script>
+  function showPizza(){
+    document.getElementById("Pizza").style.display = "block";
+    document.getElementById("Pasta").style.display = "none";
+    document.getElementById("Starter").style.display = "none";
+    document.getElementById("PizzaLink").classList.add("w3-red");
+    document.getElementById("SaladLink").classList.remove("w3-red");
+    document.getElementById("StarterLink").classList.remove("w3-red");
+
+  }
+
+  function showSalad(){
+    document.getElementById("Pizza").style.display = "none";
+    document.getElementById("Pasta").style.display = "block";
+    document.getElementById("Starter").style.display = "none";
+    document.getElementById("SaladLink").classList.add("w3-red");
+    document.getElementById("PizzaLink").classList.remove("w3-red");
+    document.getElementById("StarterLink").classList.remove("w3-red");
+
+  }
+
+  function showStarter(){
+    document.getElementById("Pizza").style.display = "none";
+    document.getElementById("Pasta").style.display = "none";
+    document.getElementById("Starter").style.display = "block";
+    document.getElementById("StarterLink").classList.add("w3-red");
+    document.getElementById("SaladLink").classList.remove("w3-red");
+    document.getElementById("PizzaLink").classList.remove("w3-red");
+}
+</script>
 
 <!-- Navbar (sit on top) -->
 <div class="w3-top w3-hide-small">
@@ -47,14 +77,15 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Amatic SC", sans-serif}
 
     <h1 class="w3-center w3-jumbo" style="margin-bottom:64px">THE MENU</h1>
     <div class="w3-row w3-center w3-border w3-border-dark-grey">
-      <a href="javascript:void(0)" id="myLink">
-        <div class="w3-col s4 tablink w3-padding-large w3-hover-red">Pizza</div>
+      <a href="javascript:showPizza()" >
+        <div class="w3-col s4 tablink w3-padding-large w3-hover-red"id="PizzaLink" >Pizza</div>
+        <!--여기서 피자 누르면 피자 항목으로 바뀌어야 함-->
       </a>
-      <a href="javascript:void(0)">
-        <div class="w3-col s4 tablink w3-padding-large w3-hover-red w3-red">Salads</div>
+      <a href="javascript:showSalad()" >
+        <div class="w3-col s4 tablink w3-padding-large w3-hover-red w3-red" id="SaladLink">Salads</div>
       </a>
-      <a href="javascript:void(0)">
-        <div class="w3-col s4 tablink w3-padding-large w3-hover-red">Starter</div>
+      <a href="javascript:showStarter()">
+        <div class="w3-col s4 tablink w3-padding-large w3-hover-red" id="StarterLink">Starter</div>
       </a>
     </div>
 
