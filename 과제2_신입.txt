@@ -1,0 +1,4 @@
+2번째 과제는 메뉴판에서 메뉴를 클릭하면 메뉴판이 바뀌는 기능을 JS로 구현하는 것입니다. 원본 사이트는 다음과 같습니다.
+원본 사이트: https://www.w3schools.com/w3css/tryw3css_templates_pizza.htm
+
+제공한 과제는 원본 사이트에서 JS 부분을 없애고 일부를 수정했어요.
